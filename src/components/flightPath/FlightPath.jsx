@@ -1,5 +1,5 @@
 import { Fragment, useContext, useEffect } from "react";
-import { Polyline, Marker } from "react-leaflet";
+import { Polyline, Marker, useMap } from "react-leaflet";
 import { Icon } from "leaflet";
 import { IssLocationContext } from "../../services/issLocationContext";
 import getIssLocation from "../../services/getIssLocation";
@@ -12,6 +12,10 @@ const FlightPath = () => {
     })
 
     const issCurrentLocation = issLocationHistory[issLocationHistory.length-1];
+
+    const map = useMap();
+    
+    if (issCurrentLocation) map.setView(issCurrentLocation);
 
     useEffect(() => {
         const interval = setInterval(() => {
