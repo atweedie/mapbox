@@ -1,5 +1,5 @@
 import { MapContainer, TileLayer } from 'react-leaflet'
-import IssFlightPath from './IssFlightPath';
+import FlightPath from '../flightPath/FlightPath';
 import 'leaflet/dist/leaflet.css';
 
 const DEFAULT_CENTER_COORDINATES = [51.4934, 0.0098];
@@ -10,7 +10,7 @@ const Map = () => (
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <IssFlightPath/>
+        <FlightPath/>
     </MapContainer>
 )
 

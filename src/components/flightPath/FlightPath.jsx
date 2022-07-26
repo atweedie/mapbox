@@ -4,7 +4,7 @@ import { Icon } from "leaflet";
 import { IssLocationContext } from "../../services/issLocationContext";
 import getIssLocation from "../../services/getIssLocation";
 
-const IssFlightPath = () => {
+const FlightPath = () => {
     const {issLocationHistory, setIssLocationHistory} = useContext(IssLocationContext);
 
     const issMarker = new Icon({
@@ -38,4 +38,4 @@ const IssFlightPath = () => {
     );
 }
 
-export default IssFlightPath;
+export default FlightPath;
